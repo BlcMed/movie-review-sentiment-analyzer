@@ -112,3 +112,11 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 - The data processing stage was time-consuming due to the large volume of textual data.
 - To address this, we utilized PySpark instead of scikit-learn for handling large datasets more efficiently. PySpark's distributed computing capabilities significantly reduced the processing time, making it more manageable for large-scale data.
 
+# References
+
+[1] Ochilbek Rakhmanov, "A Comparative Study on Vectorization and Classification Techniques in Sentiment Analysis to Classify Student-Lecturer Comments," *Procedia Computer Science*, vol. 178, pp. 194-204, 2020. ISSN: 1877-0509. DOI: [10.1016/j.procs.2020.11.021](https://doi.org/10.1016/j.procs.2020.11.021).
+
+[2] İlhan Tarimer, Adil Çoban, and Arif Kocaman, "Sentiment Analysis on IMDB Movie Comments and Twitter Data by Machine Learning and Vector Space Techniques," 2019.
+
+[3] Denis Cahyani and Irene Patasik, "Performance comparison of TF-IDF and Word2Vec models for emotion text classification," *Bulletin of Electrical Engineering and Informatics*, vol. 10, pp. 2780-2788, 2021. DOI: [10.11591/eei.v10i5.3157](https://doi.org/10.11591/eei.v10i5.3157).
+
