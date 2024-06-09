@@ -2,6 +2,8 @@
 
 ## Introduction
 
+This project aims to perform sentiment analysis on IMDB reviews to classify them as positive or negative. The process involves extensive data preprocessing, including text cleaning, tokenization, and lemmatization, followed by feature extraction using Bag of Words (BoW) and Term Frequency-Inverse Document Frequency (Tf-IDF) methods. Various machine learning models—Logistic Regression, Support Vector Machine (SVM), and Naive Bayes—are then trained and evaluated on these features. Due to the large volume of data, PySpark is utilized to expedite the data processing, ensuring efficient handling and analysis.
+
 ## Data source
 
 @InProceedings{maas-EtAl:2011:ACL-HLT2011,
@@ -15,15 +17,13 @@
   url       = {http://www.aclweb.org/anthology/P11-1015}
 }
 
-
-
 ## Approach
 
-#### Data Preprocessing
+### Data Preprocessing
 
 **Data Preparation:**
-1. Load textual reviews into a Pandas DataFrame with appropriate labels (positive/negative).
-2. Save the staged DataFrame in a CSV format.
+- Load textual reviews into a Pandas DataFrame with appropriate labels (positive/negative).
+- Save the staged DataFrame in a CSV format.
 
 **Tokenization & Lemmatization:**
 - Punctuation Removal: Strip out all punctuation from the reviews to ensure that the words are processed uniformly.
@@ -36,7 +36,7 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 - **Bag of Words (BoW):** Convert the textual data into a matrix of token counts. This method creates a vocabulary of all the unique words in the reviews and represents each review as a vector indicating the presence or absence (or frequency) of these words.
 - **Term Frequency-Inverse Document Frequency (Tf-IDF):** Transform the reviews into a matrix where each term's importance is scaled by how often it appears across all reviews. This method accounts for the frequency of terms in each review and across the entire dataset, providing a balanced view of word importance.
 
-#### Model Building
+### Model Building
 
 - **Model Selection:**
 
@@ -51,9 +51,10 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
   - Tune hyperparameters for each model to optimize performance.
   - Evaluate the models using: accuracy, precision, recall, F1-score.
 
-## Results
+# Results
 
-### Summary table
+## Summary table
+
 |                 | BoW               | Tf-IDF            |
 |-----------------|-------------------|-------------------|
 | **Logistic**    | Accuracy: 0.83    | Accuracy: 0.83    |
@@ -72,7 +73,7 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 |                 | F1-score: 0.85    | F1-score: 0.82    |
 |                 | Recall: 0.85      | AUC: 0.82         |
 
-### ROC-curves
+## ROC-curves
 
 **Modelling BoW vectorized data frame**
 
@@ -86,11 +87,12 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 ![SVM](/screenshots/tf-svm.png)
 ![Nayev Bayes](/screenshots/tf-nay.png)
 
-## Challenges
+# Challenges
+
 - The data processing stage was time-consuming due to the large volume of textual data.
 - To address this, we utilized PySpark instead of scikit-learn for handling large datasets more efficiently. PySpark's distributed computing capabilities significantly reduced the processing time, making it more manageable for large-scale data.
 
-## Conclusion
+# Conclusion
 
 **Model Performance:**
 - **Logistic Regression:**
@@ -109,3 +111,4 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 **Data Processing Time:**
 - The data processing stage was time-consuming due to the large volume of textual data.
 - To address this, we utilized PySpark instead of scikit-learn for handling large datasets more efficiently. PySpark's distributed computing capabilities significantly reduced the processing time, making it more manageable for large-scale data.
+
