@@ -53,6 +53,7 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 
 ## Results
 
+### Summary table
 |                 | BoW               | Tf-IDF            |
 |-----------------|-------------------|-------------------|
 | **Logistic**    | Accuracy: 0.83    | Accuracy: 0.83    |
@@ -70,6 +71,20 @@ To capture sentiment information in the textual data, we used Bag of Words (BoW)
 |                 | Recall: 0.85      | Recall: 0.82      |
 |                 | F1-score: 0.85    | F1-score: 0.82    |
 |                 | Recall: 0.85      | AUC: 0.82         |
+
+### ROC-curves
+
+**Modelling BoW vectorized data frame**
+
+![Logistic Regression](/screenshots/bow-log.png)
+![SVM](/screenshots/bow-svm.png)
+![Nayev Bayes](/screenshots/bow-nay.png)
+
+**Modelling Tf-IDF vectorized data frame**
+
+![bow-log](/screenshots/tf-log.png)
+![SVM](/screenshots/tf-svm.png)
+![Nayev Bayes](/screenshots/tf-nay.png)
 
 ## Challenges
 - The data processing stage was time-consuming due to the large volume of textual data.
